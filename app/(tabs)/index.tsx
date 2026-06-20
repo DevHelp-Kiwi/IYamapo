@@ -1,6 +1,8 @@
-import { Typography } from '@/components/typography';
+import { Text, View, StyleSheet, ScrollView } from 'react-native';
 import { Link } from 'expo-router';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Button } from '@react-navigation/elements';
+import { Typography } from '@components/typography'
+
 
 export default function Index() {
   return (
@@ -13,9 +15,7 @@ export default function Index() {
       {/* Banner header*/}
       <View style={styles.row}><View style={styles.item}></View>
       <View style={[styles.item, {backgroundColor: "#e0bdbd"}]}>
-      <Typography variant="title">Olá</Typography>
-      {/*<Text>LOREM DASTIS DNIO PACLOECOS TOSCHEDO S,NDS</Text> */}  
-    <Typography variant="subtitle">Mundo</Typography>
+      <Text>LOREM DASTIS DNIO PACLOECOS TOSCHEDO S,NDS</Text>
       </View></View>
 
       {/* BANNER 2 */}

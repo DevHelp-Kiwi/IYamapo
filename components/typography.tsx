@@ -1,12 +1,13 @@
 // components/Typography.tsx
-import { StyleSheet, Text, type TextProps } from 'react-native';
+import { Text, StyleSheet, type TextProps } from 'react-native';
 
-// definir styles primeiro se não buga. mas isso também pode ser resolvido com um import
+// 1. Definindo os tipos de variantes disponíveis
+type TypographyVariant = 'title' | 'subtitle' | 'body';
 const styles = StyleSheet.create({
   title: {
     fontSize: 32,
     fontWeight: 'bold',
-    color: '#bbff00',
+    color: '#333',
     marginBottom: 8,
   },
   subtitle: {
@@ -22,11 +23,7 @@ const styles = StyleSheet.create({
     lineHeight: 22,
   },
 });
-
-// 1. Definindo os tipos de variantes disponíveis
-type TypographyVariant = 'title' | 'subtitle' | 'body';
-
-// 2. Dicionário
+// 2. Mapeando cada variante para um conjunto de estilos
 const variantStyles = {
   title: styles.title,
   subtitle: styles.subtitle,

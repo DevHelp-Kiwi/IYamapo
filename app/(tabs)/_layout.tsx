@@ -1,7 +1,8 @@
 import { Stack } from 'expo-router';
 import { View, StyleSheet } from 'react-native';
 import { Header } from '@/components/header';   
-import { Footer } from '@/components/footer';   
+import { Footer } from '@/components/footer';  
+import { Typography } from '@/components/typography'; 
 
 export default function RootLayout() {
   return (
