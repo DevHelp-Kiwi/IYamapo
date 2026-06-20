@@ -1,98 +1,132 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
-
-import { HelloWave } from '@/components/hello-wave';
-import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
+import { Typography } from '@/components/typography';
 import { Link } from 'expo-router';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
-export default function HomeScreen() {
+export default function Index() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12',
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <Link href="/modal">
-          <Link.Trigger>
-            <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-          </Link.Trigger>
-          <Link.Preview />
-          <Link.Menu>
-            <Link.MenuAction title="Action" icon="cube" onPress={() => alert('Action pressed')} />
-            <Link.MenuAction
-              title="Share"
-              icon="square.and.arrow.up"
-              onPress={() => alert('Share pressed')}
-            />
-            <Link.Menu title="More" icon="ellipsis">
-              <Link.MenuAction
-                title="Delete"
-                icon="trash"
-                destructive
-                onPress={() => alert('Delete pressed')}
-              />
-            </Link.Menu>
-          </Link.Menu>
-        </Link>
+   <ScrollView       style={styles.scrollContent}
+      showsVerticalScrollIndicator={true}>
+    <View style={styles.container}>
+      
+      {/*Acima ^ é container de background */}
 
-        <ThemedText>
-          {`Tap the Explore tab to learn more about what's included in this starter app.`}
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          {`When you're ready, run `}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
+      {/* Banner header*/}
+      <View style={styles.row}><View style={styles.item}></View>
+      <View style={[styles.item, {backgroundColor: "#e0bdbd"}]}>
+      <Typography variant="title">Olá</Typography>
+      {/*<Text>LOREM DASTIS DNIO PACLOECOS TOSCHEDO S,NDS</Text> */}  
+    <Typography variant="subtitle">Mundo</Typography>
+      </View></View>
+
+      {/* BANNER 2 */}
+      <View style={[styles.row, { backgroundColor: '#63c53c', justifyContent: 'space-evenly' }]}><Text> Não fazemos apenas audiovisual</Text><View style={styles.item}></View></View>
+
+      {/* SOL E CORRENTE */}
+      <View style={[styles.row, {justifyContent: "space-evenly" }]}>
+        <View style={[styles.item, {height: '100%'}]}>
+          <View style={[styles.item, {backgroundColor: "#e0bdbd"}]}>
+          <Text> Sol e corrente</Text>
+          </View>
+        </View>
+        <View style={styles.col}>
+          <Text>LOREM IPSLUM</Text>
+          <Link href="/about" style={styles.button}>
+        Assista Trailer
+      </Link>
+        </View>
+      </View>
+
+      {/* TAB BANNER */}
+      <View style={styles.row}>
+        <View style={[styles.item, {backgroundColor: "#e0bdbd"}]}>
+        <Text>O QUE FAZEMOS</Text></View>
+        <View style={styles.item}></View></View>
+
+      {/* ARTISTA AUDIOVISUAL?  */}
+      <View style={styles.row}>
+        <View style={[styles.item, {backgroundColor: "#e0bdbd"}]}>
+        <Text>ARTISTA AUDIOVISIAL?</Text>
+        </View>
+        <View style={styles.item}></View></View>
+
+      {/* INFO OBJECT */}
+      <View style={styles.row}><View style={styles.banner}></View> <View style={styles.item}></View></View>
+
+
+    </View></ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
+  container: {
+    flex: 1,
+    backgroundColor: '#c9b2b2',
     alignItems: 'center',
-    gap: 8,
+    justifyContent: 'center',
   },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
+  container2: {
+    flex: 1,
+    backgroundColor: '#000000',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
+  scrollContent: {
+    gap: 15, 
+  },
+  item: {
+    backgroundColor: '#ff0000',
+    padding: 10,
+    width: 130 ,
+    height: 130 ,
+   
+    borderRadius: 4,
+  },
+  row: {
+    
+    flexDirection: 'row',    
+    justifyContent: 'space-evenly', 
+    alignItems: 'center',       
+    width: '100%',
+    height: 150,
+
+    backgroundColor: '#f0f0f0',
+    padding: 10,
+  
+    borderColor: '#000000',
+    borderStyle: "solid",
+    borderWidth: 0,
+    borderBottomWidth: 2,
+  },
+  col:{
+    flex: 1,
+    flexDirection: 'column',    
+    justifyContent: 'space-evenly', 
+    alignItems: 'center',       
+  
+    backgroundColor: '#f0f0f0',
+  
+    borderRadius: 8,
+  },
+  square: {
+    width: 100,
+    height: 100,
+    backgroundColor: '#0f8655',
+    borderRadius: 8,
+  },
+  banner: {
+    width: '60%',
+    height: "100%",
+    backgroundColor: '#ffcc80',
+    justifyContent: 'center',
+    alignItems: 'baseline',
+    borderRadius: 8,
+  },
+  text: {
+    color: '#fff',
+  },
+  button: {
+    fontSize: 20,
+    textDecorationLine: 'underline',
+    color: '#662f2f',
   },
 });
