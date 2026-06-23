@@ -1,8 +1,9 @@
 import { Estilo } from '@/components/estilo';
 import { Lato_900Black, useFonts } from '@expo-google-fonts/lato';
 import { PlayfairDisplay_400Regular_Italic } from '@expo-google-fonts/playfair-display';
+import { Link } from 'expo-router';
 import React from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 
 export default function Index() {
@@ -10,28 +11,37 @@ export default function Index() {
         Lato_900Black,
         PlayfairDisplay_400Regular_Italic,
 
-     });
-        if(!fontsLoaded) {
-            return null;
-        }
+    });
+    if (!fontsLoaded) {
+        return null;
+    }
     return (
 
         <ScrollView style={styles.scrollContent}
             showsVerticalScrollIndicator={true}>
             <Estilo vari='col'>
                 <View>
-                    <View style={[styles.item, { backgroundColor: "#e0bdbd" }, {}]}><Estilo vari="title">Este é o Título Principal</Estilo></View>
+                    {/*banner*/}
+                    <View style={[styles.item, { backgroundColor: "#e0bdbd" }, {}]}>
+
+                        <Image source={require('@/assets/images/viena.jpg')} />
+                    </View>
+                    <View style={[styles.item, { backgroundColor: "#e0bdbd" }, {}]}><Link href="/" style={styles.button}><Estilo vari="title">Este é o Título Principal</Estilo></Link> </View>
+
+
+
+
                     <View style={[styles.item, { backgroundColor: "#e0bdbd" }]}>
                         {/*<Estilo vari="subtitle" >Este é um Subtítulo Importante</Estilo>*/}
-                       <Text style={{ fontFamily: 'PlayfairDisplay_400Regular_Italic', fontSize: 20 }}>PlayfairDisplay_400Regular_Italic</Text>
-                        </View>
+                        <Text style={{ fontFamily: 'PlayfairDisplay_400Regular_Italic', fontSize: 20 }}>PlayfairDisplay_400Regular_Italic</Text>
+                    </View>
                     <View style={[styles.item, { backgroundColor: "#e0bdbd" }]}>
                         {/*<Estilo vari="body">
                         Este é o corpo do texto. Ele é usado para parágrafos longos, descrições e
                         qualquer conteúdo que não seja um título. É muito mais fácil de ler e
                         manter!
                     </Estilo>*/}
-                    <Text style={{ fontFamily: 'Lato_900Black', fontSize: 20 }}>Lato900black</Text>
+                        <Text style={{ fontFamily: 'Lato_900Black', fontSize: 20 }}>Lato900black</Text>
                     </View>
                 </View>
                 {/* 1. Título: basta informar vari="title" */}
@@ -65,6 +75,11 @@ const styles = StyleSheet.create({
     },
     scrollContent: {
         gap: 15,
+    },
+    button: {
+        fontSize: 20,
+        textDecorationLine: 'underline',
+        color: '#662f2f',
     },
 
 
