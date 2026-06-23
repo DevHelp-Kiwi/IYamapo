@@ -2,7 +2,7 @@
 import { StyleSheet, Text, type TextProps } from 'react-native';
 
 // 1. Definindo os tipos de variantes disponíveis
-type Estilos = 'title' | 'subtitle' | 'body' | 'col' | 'row' | 'banner' | 'image';
+type Estilos = 'title' | 'subtitle' | 'body' | 'col' | 'row' | 'banner' | 'image' | 'container';
 const styles = StyleSheet.create({
   title: {
     fontSize: 32,
@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#c9b2b2',
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 10,
   },
   row: {
     flexDirection: 'row',
@@ -51,7 +52,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignContent: "space-around",
     flex: 1,
-    width: "100%"
+    width: 50,
+  
 
   },
   image: {
@@ -69,6 +71,7 @@ const variantStyles = {
   row: styles.row,
   banner: styles.banner,
   image: styles.image,
+  container: styles.container
 };
 
 // 3. Definindo as propriedades que o nosso componente vai aceitar

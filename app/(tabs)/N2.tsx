@@ -3,7 +3,7 @@ import { Lato_900Black, useFonts } from '@expo-google-fonts/lato';
 import { PlayfairDisplay_400Regular_Italic } from '@expo-google-fonts/playfair-display';
 import { Link } from 'expo-router';
 import React from 'react';
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ImageBackground, ScrollView, StyleSheet, Text } from 'react-native';
 
 
 export default function Index() {
@@ -20,32 +20,44 @@ export default function Index() {
         <ScrollView style={styles.scrollContent}
             showsVerticalScrollIndicator={true}>
             <Estilo vari='col'>
-                <View>
-                    {/*banner*/}
-                    <View style={[styles.item, { backgroundColor: "#e0bdbd" }, {}]}>
+                <Estilo vari='row' style={{ backgroundColor: 'white' }}>
+                    <Estilo vari='container'>
+                        {/*banner*/}
+                        <Estilo vari='banner'>
+                            <ImageBackground
+                                source={require('@/assets/images/capabanner.png')}
+                                style={styles.item}
+                            />
+                        </Estilo>
 
-                        <Image source={require('@/assets/images/viena.jpg')} />
-                    </View>
-                    <View style={[styles.item, { backgroundColor: "#e0bdbd" }, {}]}><Link href="/" style={styles.button}><Estilo vari="title">Este é o Título Principal</Estilo></Link> </View>
+
+
+
+                        <Estilo vari="title">Este é o Título Principal
+                            <Link href="/" style={styles.button}>
+                            </Link>
+                        </Estilo>
 
 
 
 
-                    <View style={[styles.item, { backgroundColor: "#e0bdbd" }]}>
+
+
+
                         {/*<Estilo vari="subtitle" >Este é um Subtítulo Importante</Estilo>*/}
                         <Text style={{ fontFamily: 'PlayfairDisplay_400Regular_Italic', fontSize: 20 }}>PlayfairDisplay_400Regular_Italic</Text>
-                    </View>
-                    <View style={[styles.item, { backgroundColor: "#e0bdbd" }]}>
+
+
+
+                        {/* 1. Título: basta informar vari="title" */}
+
                         {/*<Estilo vari="body">
                         Este é o corpo do texto. Ele é usado para parágrafos longos, descrições e
                         qualquer conteúdo que não seja um título. É muito mais fácil de ler e
                         manter!
                     </Estilo>*/}
                         <Text style={{ fontFamily: 'Lato_900Black', fontSize: 20 }}>Lato900black</Text>
-                    </View>
-                </View>
-                {/* 1. Título: basta informar vari="title" */}
-                <Estilo vari='banner' style={{ backgroundColor: 'white' }}>
+                    </Estilo>
                     <Estilo vari='col' style={{ flexDirection: 'column' }}>
 
 
@@ -59,28 +71,78 @@ export default function Index() {
     );
 }
 
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
+        backgroundColor: '#c9b2b2',
         alignItems: 'center',
-        backgroundColor: "#6d1b1b"
+        justifyContent: 'center',
+    },
+    container2: {
+        flex: 1,
+        backgroundColor: '#000000',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    scrollContent: {
+        gap: 15,
     },
     item: {
         backgroundColor: '#ff0000',
         padding: 10,
-        width: 200,
-        height: 130,
+        width: '100%',
+        height: '100%',
+
         borderRadius: 4,
     },
-    scrollContent: {
-        gap: 15,
+    row: {
+
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        alignItems: 'center',
+        width: '100%',
+        height: 150,
+
+        backgroundColor: '#f0f0f0',
+        padding: 10,
+
+        borderColor: '#000000',
+        borderStyle: "solid",
+        borderWidth: 0,
+        borderBottomWidth: 2,
+    },
+    col: {
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'space-evenly',
+        alignItems: 'center',
+
+        backgroundColor: '#f0f0f0',
+
+        borderRadius: 8,
+    },
+    square: {
+        width: 100,
+        height: 100,
+        backgroundColor: '#0f8655',
+        borderRadius: 8,
+    },
+    banner: {
+        width: '60%',
+        height: "100%",
+        backgroundColor: '#ffcc80',
+        justifyContent: 'center',
+        alignItems: 'baseline',
+        borderRadius: 8,
+    },
+    text: {
+        color: '#fff',
     },
     button: {
         fontSize: 20,
         textDecorationLine: 'underline',
         color: '#662f2f',
     },
+});
 
-
-})

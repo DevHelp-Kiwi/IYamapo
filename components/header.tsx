@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 export function Header() {
   return (
@@ -10,11 +10,11 @@ export function Header() {
 
 const styles = StyleSheet.create({
   header: {
-    height: 70,
+    height: 30,
     backgroundColor: '#6200ee',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingTop: 20, 
+   
   },
   title: {
     color: 'white',
