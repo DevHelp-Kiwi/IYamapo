@@ -1,8 +1,7 @@
+import { Footer } from '@/components/footer';
+import { Header } from '@/components/header';
 import { Stack } from 'expo-router';
-import { View, StyleSheet } from 'react-native';
-import { Header } from '@/components/header';   
-import { Footer } from '@/components/footer';  
-import { Typography } from '@/components/typography'; 
+import { StyleSheet, View } from 'react-native';
 
 export default function RootLayout() {
   return (
@@ -12,7 +11,9 @@ export default function RootLayout() {
         <Stack>
           <Stack.Screen name="index" options={{ title: 'Home', headerShown: false }} />
           <Stack.Screen name="about" options={{ title: 'About', headerShown: false }} />
+          <Stack.Screen name="N2" options={{ title: 'Rota n2', headerShown: false }} />
         </Stack>
+      
       </View>
       <Footer />
     </View>
@@ -29,4 +30,5 @@ const styles = StyleSheet.create({
    scrollContent: {
     flexGrow: 1,  
   },
+  
 });

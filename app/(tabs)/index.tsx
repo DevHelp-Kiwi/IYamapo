@@ -1,21 +1,18 @@
-import { Text, View, StyleSheet, ScrollView } from 'react-native';
 import { Link } from 'expo-router';
-import { Button } from '@react-navigation/elements';
-import { Typography } from '@components/typography'
-
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
 export default function Index() {
   return (
    <ScrollView       style={styles.scrollContent}
       showsVerticalScrollIndicator={true}>
     <View style={styles.container}>
-      
       {/*Acima ^ é container de background */}
 
       {/* Banner header*/}
       <View style={styles.row}><View style={styles.item}></View>
       <View style={[styles.item, {backgroundColor: "#e0bdbd"}]}>
       <Text>LOREM DASTIS DNIO PACLOECOS TOSCHEDO S,NDS</Text>
+      
       </View></View>
 
       {/* BANNER 2 */}
@@ -30,7 +27,7 @@ export default function Index() {
         </View>
         <View style={styles.col}>
           <Text>LOREM IPSLUM</Text>
-          <Link href="/about" style={styles.button}>
+          <Link href="/N2" style={styles.button}>
         Assista Trailer
       </Link>
         </View>
