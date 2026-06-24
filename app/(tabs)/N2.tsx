@@ -1,6 +1,10 @@
 import { Estilo } from '@/components/estilo';
-import { Lato_900Black, useFonts } from '@expo-google-fonts/lato';
-import { PlayfairDisplay_400Regular_Italic } from '@expo-google-fonts/playfair-display';
+import { Birthstone_400Regular } from '@expo-google-fonts/birthstone/400Regular';
+import { useFonts } from '@expo-google-fonts/birthstone/useFonts';
+import { Inter_400Regular } from '@expo-google-fonts/inter/400Regular';
+import { Inter_600SemiBold } from '@expo-google-fonts/inter/600SemiBold';
+import { Lato_900Black } from '@expo-google-fonts/lato';
+import { PlayfairDisplay_400Regular_Italic, PlayfairDisplay_700Bold } from '@expo-google-fonts/playfair-display';
 import { Link } from 'expo-router';
 import React from 'react';
 import { ImageBackground, ScrollView, StyleSheet, Text } from 'react-native';
@@ -10,7 +14,10 @@ export default function Index() {
     let [fontsLoaded] = useFonts({
         Lato_900Black,
         PlayfairDisplay_400Regular_Italic,
-
+        PlayfairDisplay_700Bold,
+        Birthstone_400Regular,
+        Inter_400Regular,
+        Inter_600SemiBold,
     });
     if (!fontsLoaded) {
         return null;
@@ -20,130 +27,125 @@ export default function Index() {
         <ScrollView style={styles.scrollContent}
             showsVerticalScrollIndicator={true}>
             <Estilo vari='col'>
-                <Estilo vari='row' style={{ backgroundColor: 'white' }}>
-                    <Estilo vari='container'>
-                        {/*banner*/}
-                        <Estilo vari='banner'>
-                            <ImageBackground
-                                source={require('@/assets/images/capabanner.png')}
-                                style={styles.item}
-                            />
-                        </Estilo>
 
 
+                {/*img background pega prop como felxbox*/}{/**/}
+                <Estilo vari='banner'>
+                    <ImageBackground
+                        source={require('@/assets/images/capabanner.png')}
+                        style={styles.item} >
+                            {/*Linha para identar 50% cada*/}
+                        <Estilo vari='row' >
+                            {/*coluna de texto*/}
+                            <Estilo vari='col' >
+                                <Estilo vari='wrapper'>
+                                    <Text style={{ fontFamily: 'Lato_900Black', fontSize: 20, color: "#b18537" }}>
+                                        CAMPANHA</Text>
 
-                        <Estilo vari='container'>
-                            <Estilo vari="title">Este é o Título Principal
-                                <Link href="/" style={styles.button}>
-                                </Link>
+                                </Estilo>
+
+                                <Estilo vari='wrapper'>
+                                    <Text style={{ fontFamily: 'PlayfairDisplay_700Bold', fontSize: 60, color: '#fff' }}>
+                                        RESPIRA</Text>
+
+                                </Estilo>
+                                <Estilo vari='wrapper'>
+                                    <Text style={{ fontFamily: 'Birthstone_400Regular', fontSize: 45, color: "#b18537" }}>
+                                        Um oasis na rota N2</Text>
+
+                                </Estilo>
+                                <Estilo vari='wrapper'>
+                                    <Text style={{ fontFamily: 'Inter_400Regular', fontSize: 15, color: '#fff' }}>
+                                        Uma campanha de video que dá vida</Text>
+                                    <Text style={{ fontFamily: 'Inter_400Regular', fontSize: 15, color: '#fff' }}> a pequenos negócios do Médio tejo</Text>
+                                    <Text style={{ fontFamily: 'Inter_400Regular', fontSize: 15, color: '#fff' }}>  e tranforma história em conexões reais.</Text>
+
+                                </Estilo>
+                                <Estilo vari='wrapper'>
+                                    <Text style={{ fontFamily: 'PlayfairDisplay_400Regular_Italic', fontSize: 20, }}>
+                                        Ver video da campanha</Text>
+
+                                </Estilo>
+
+
                             </Estilo>
+
+                            {/*outro item vazio para identar responsivamente*/}
+                            <Estilo vari='item'></Estilo>
                         </Estilo>
 
+                    </ImageBackground>
+
+                </Estilo>
 
 
 
-                        {/*<Estilo vari="subtitle" >Este é um Subtítulo Importante</Estilo>*/}
+
+
+                <Estilo vari='row'>
+                    <Estilo vari='col' style={{backgroundColor: '#fff', padding: 25}}>
+
+                        <Text style={{ fontFamily: 'Inter_600SemiBold', fontSize: 15,  alignSelf: 'center', alignContent: 'center', alignItems: 'center', color: "#b18537" }}>
+                            COMO FUNCIONA A RESPIRA?</Text>
+                            <Text style={{ fontFamily: 'PlayfairDisplay_700Bold', fontSize: 18, alignSelf: 'center', alignContent: 'center', alignItems: 'center' }}>
+                            Simples. Direto. E eficaz.</Text>
+
+
+                    </Estilo>
+
+                    <Link href="/" style={styles.button}>
+                    </Link>
+
+                </Estilo>
+
+                <Estilo vari='row'>
+                    <Estilo vari='container'>
                         <Text style={{ fontFamily: 'PlayfairDisplay_400Regular_Italic', fontSize: 20 }}>PlayfairDisplay_400Regular_Italic</Text>
 
 
+                    </Estilo>
 
-                        {/* 1. Título: basta informar vari="title" */}
+                </Estilo>
 
-                        {/*<Estilo vari="body">
+
+
+
+                {/*<Estilo vari="body">
                         Este é o corpo do texto. Ele é usado para parágrafos longos, descrições e
                         qualquer conteúdo que não seja um título. É muito mais fácil de ler e
                         manter!
-                    </Estilo>*/}
-                        <Text style={{ fontFamily: 'Lato_900Black', fontSize: 20 }}>Lato900black</Text>
                     </Estilo>
-                    <Estilo vari='col' style={{ flexDirection: 'column' }}>
+                    */}
+                <Text style={{ fontFamily: 'Lato_900Black', fontSize: 20 }}>Lato900black</Text>
 
-
-                    </Estilo>
-                </Estilo>
 
 
             </Estilo>
 
-        </ScrollView>
+
+        </ScrollView >
     );
 }
 
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#ffffff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    container2: {
-        flex: 1,
-        backgroundColor: '#000000',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
+
     scrollContent: {
         gap: 15,
     },
     item: {
-        backgroundColor: '#ff0000',
-
-        paddingTop: 400,
+        backgroundColor: '#eeeeee',
         width: '100%',
         height: '100%',
-        minHeight: 500,
-
-        borderRadius: 4,
-    },
-    row: {
-
-        flexDirection: 'row',
-        justifyContent: 'space-evenly',
-        alignItems: 'center',
-        width: '100%',
-        height: 150,
-
-        backgroundColor: '#f0f0f0',
-        padding: 10,
-
-        borderColor: '#000000',
-        borderStyle: "solid",
-        borderWidth: 0,
-        borderBottomWidth: 2,
-    },
-    col: {
-        flex: 1,
-        flexDirection: 'column',
-        justifyContent: 'space-evenly',
-        alignItems: 'center',
-
-        backgroundColor: '#f0f0f0',
-
-        borderRadius: 8,
-    },
-    square: {
-        width: 100,
-        height: 100,
-        backgroundColor: '#0f8655',
-        borderRadius: 8,
-    },
-    banner: {
-        width: '60%',
-        height: "100%",
-        backgroundColor: '#ffcc80',
+        minHeight: 400,
+        zIndex: -1,
         justifyContent: 'center',
-        alignItems: 'baseline',
-        borderRadius: 8,
-    },
-    text: {
-        color: '#fff',
+        alignItems: 'flex-start',
+
     },
     button: {
         fontSize: 20,
         textDecorationLine: 'underline',
-        color: '#662f2f',
     },
-
 });
 

@@ -1,13 +1,13 @@
-// app/_layout.tsx
+
 import { Footer } from '@/components/footer';
-import { Header } from '@/components/header'; // ← Agora importa corretamente
+import { Header } from '@/components/header';
 import { Stack } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
 
 export default function RootLayout() {
   return (
     <View style={styles.container}>
-      <Header />   {/* ← Agora funciona */}
+      <Header />  
       <View style={styles.content}>
         <Stack>
           <Stack.Screen name="index" options={{ title: 'Home', headerShown: false }} />
@@ -21,6 +21,6 @@ export default function RootLayout() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1 },
-  content: { flex: 1 },
+  container: { flex: 1, },
+  content: { flex: 1, },
 });

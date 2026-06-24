@@ -1,95 +1,64 @@
-// components/Typography.tsx
-import { StyleSheet, Text, type TextProps } from 'react-native';
+// components/Layout.tsx
+import { StyleSheet, View, ViewProps } from 'react-native';
 
-// 1. Definindo os tipos de variantes disponíveis
-type Estilos = 'title' | 'subtitle' | 'body' | 'col' | 'row' | 'banner' | 'image' | 'container';
-const styles = StyleSheet.create({
-  title: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    color: '#333',
-    marginBottom: 8,
-  },
-  subtitle: {
-    fontSize: 20,
-    fontWeight: '600',
-    color: '#666',
-    marginBottom: 6,
-  },
-  body: {
-    fontSize: 16,
-    fontWeight: 'normal',
-    color: '#444',
-    lineHeight: 22,
-  },
-  container: {
-    flex: 1,
-    backgroundColor: '#ccc9c9',
-    alignItems: 'center',
-    justifyContent: 'center',
-    
-    width: 'auto',
-    height: 'auto'
-  },
-  row: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'stretch',
-    width: '100%',
-    height: 'auto',
-    backgroundColor: '#c02b2b',
-   
-   
-  },
-  col: {
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'space-evenly',
-    alignItems: 'center',
-    backgroundColor: '#bbbbbb',
-    
-  },
-  banner: {
-    flexDirection: "row",
-    alignContent: "space-around",
-    flex: 1,
-    width: 50,
-  
-
-  },
-  image: {
-   
-  }
-
-
-});
-// 2. Mapeando cada variante para um conjunto de estiloss
-const variantStyles = {
-  title: styles.title,
-  subtitle: styles.subtitle,
-  body: styles.body,
-  col: styles.col,
-  row: styles.row,
-  banner: styles.banner,
-  image: styles.image,
-  container: styles.container
-};
-
-// 3. Definindo as propriedades que o nosso componente vai aceitar
-interface TypographyProps extends TextProps {
-  vari: Estilos; // A variante é obrigatória
-  children: React.ReactNode; // O conteúdo do texto
-  // ... outras props customizadas se necessário
+type Estilos = 'container' | 'row' | 'col' | 'banner' | 'image' | 'wrapper' | 'item';
+interface LayoutProps extends ViewProps {
+  vari: Estilos;
+  children: React.ReactNode;
 }
 
-// 4. Criando o componente principal
-export function Estilo({ vari, style, children, ...rest }: TypographyProps) {
-  // A magia acontece aqui: o 'style' do componente vai ser a união do
-  // estilos da variante escolhida com quaisquer estiloss extras passados via 'style' prop.
+const layoutStyles = StyleSheet.create({
+  container: { flex: 1, backgroundColor: '#fff', alignItems: 'center', justifyContent: 'center' },
+  row: {
+     flexDirection: 'row',
+      justifyContent: 'space-evenly',
+       alignItems: 'center',
+       /*auto prop parece estar bugado*/
+        width: '100%',
+         height: 'auto',
+        
+
+
+           
+          },
+  col: {
+     flexDirection: 'column',
+      justifyContent: 'space-evenly',
+       alignItems: 'center',
+         width: 'auto',
+          height: 'auto',
+          flex: 1,
+         },
+  banner: {
+     flexDirection: 'row',
+      alignContent: 'space-around',
+       width: 1600,
+      height:  500,
+            justifyContent: 'flex-start',
+        alignItems: 'flex-start',
+      
+      display: 'flex'
+     },
+  image: {
+
+  },
+  wrapper: {
+alignItems: 'center',
+flex: 2,
+  },
+  item:{
+    padding: 50,
+   
+      width: '50%',
+         height: '50%',
+        
+  }
+});
+
+export function Estilo({ vari, style, children, ...rest }: LayoutProps) {
   return (
-    <Text style={[variantStyles[vari], style]} {...rest}>
+    <View style={[layoutStyles[vari], style]} {...rest}>
       {children}
-    </Text>
+    </View>
   );
 }
-
