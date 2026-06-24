@@ -5,9 +5,15 @@ import { Inter_400Regular } from '@expo-google-fonts/inter/400Regular';
 import { Inter_600SemiBold } from '@expo-google-fonts/inter/600SemiBold';
 import { Lato_900Black } from '@expo-google-fonts/lato';
 import { PlayfairDisplay_400Regular_Italic, PlayfairDisplay_700Bold } from '@expo-google-fonts/playfair-display';
+import Entypo from '@expo/vector-icons/Entypo';
+import Feather from '@expo/vector-icons/Feather';
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import SimpleLineIcons from '@expo/vector-icons/SimpleLineIcons';
 import { Link } from 'expo-router';
 import React from 'react';
 import { ImageBackground, ScrollView, StyleSheet, Text } from 'react-native';
+
 
 
 export default function Index() {
@@ -99,10 +105,15 @@ export default function Index() {
                 </Estilo>
 
                 <Estilo vari='row'>
-                    <Estilo vari='container'>
-                        <Text style={{ fontFamily: 'PlayfairDisplay_400Regular_Italic', fontSize: 20 }}>PlayfairDisplay_400Regular_Italic</Text>
-
-
+                    <Estilo vari='row' style={{backgroundColor: "#fff", height: 100}} >
+                        <Feather name="target" size={24} color="#3f6e58" />
+<Entypo name="paper-plane" size={24} color="#3f6e58" />
+<MaterialCommunityIcons name="silverware-fork-knife" size={24} color="#3f6e58" />
+<SimpleLineIcons name="cup" size={24} color="#3f6e58" />
+<FontAwesome6 name="bed" size={24} color="#3f6e58" />
+<SimpleLineIcons name="handbag" size={24} color="#3f6e58" />
+<SimpleLineIcons name="bag" size={24} color="#3f6e58" />
+<MaterialCommunityIcons name="account-group-outline" size={24} color="#3f6e58" />
                     </Estilo>
 
                 </Estilo>
