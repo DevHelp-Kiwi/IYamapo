@@ -32,14 +32,12 @@ export default function Index() {
 
 
 
-
-                        <Estilo vari="title">Este é o Título Principal
-                            <Link href="/" style={styles.button}>
-                            </Link>
+                        <Estilo vari='container'>
+                            <Estilo vari="title">Este é o Título Principal
+                                <Link href="/" style={styles.button}>
+                                </Link>
+                            </Estilo>
                         </Estilo>
-
-
-
 
 
 
@@ -75,7 +73,7 @@ export default function Index() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#c9b2b2',
+        backgroundColor: '#ffffff',
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -90,9 +88,11 @@ const styles = StyleSheet.create({
     },
     item: {
         backgroundColor: '#ff0000',
-        padding: 10,
+
+        paddingTop: 400,
         width: '100%',
         height: '100%',
+        minHeight: 500,
 
         borderRadius: 4,
     },
@@ -144,5 +144,6 @@ const styles = StyleSheet.create({
         textDecorationLine: 'underline',
         color: '#662f2f',
     },
+
 });
 

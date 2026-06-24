@@ -24,20 +24,21 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: '#c9b2b2',
+    backgroundColor: '#ccc9c9',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 10,
+    
+    width: 'auto',
+    height: 'auto'
   },
   row: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'stretch',
     width: '100%',
-    height: 250,
+    height: 'auto',
     backgroundColor: '#c02b2b',
-    padding: 1,
-
+   
    
   },
   col: {
