@@ -40,7 +40,7 @@ export default function Index() {
                     <ImageBackground
                         source={require('@/assets/images/capabanner.png')}
                         style={styles.item} >
-                            {/*Linha para identar 50% cada*/}
+                        {/*Linha para identar 50% cada*/}
                         <Estilo vari='row' >
                             {/*coluna de texto*/}
                             <Estilo vari='col' >
@@ -89,11 +89,11 @@ export default function Index() {
 
 
                 <Estilo vari='row'>
-                    <Estilo vari='col' style={{backgroundColor: '#fff', padding: 25}}>
+                    <Estilo vari='col' style={{ backgroundColor: '#fff', padding: 25 }}>
 
-                        <Text style={{ fontFamily: 'Inter_600SemiBold', fontSize: 15,  alignSelf: 'center', alignContent: 'center', alignItems: 'center', color: "#b18537" }}>
+                        <Text style={{ fontFamily: 'Inter_600SemiBold', fontSize: 15, alignSelf: 'center', alignContent: 'center', alignItems: 'center', color: "#b18537" }}>
                             COMO FUNCIONA A RESPIRA?</Text>
-                            <Text style={{ fontFamily: 'PlayfairDisplay_700Bold', fontSize: 18, alignSelf: 'center', alignContent: 'center', alignItems: 'center' }}>
+                        <Text style={{ fontFamily: 'PlayfairDisplay_700Bold', fontSize: 18, alignSelf: 'center', alignContent: 'center', alignItems: 'center' }}>
                             Simples. Direto. E eficaz.</Text>
 
 
@@ -103,31 +103,86 @@ export default function Index() {
                     </Link>
 
                 </Estilo>
+                {/*criamos stortelling row*/}
+                <Estilo vari='row' style={{ backgroundColor: 'white' }}>
+                    {/*Coluna 1*/}
+                    <Estilo vari='row' style={{ flex: 3, padding: 10 }}>
+                        <Estilo vari='item' style={{ borderRadius: '100%', backgroundColor: "#223924", padding: 10, alignItems: 'center', justifyContent: 'center', alignSelf: 'baseline', width: 40, height: 40 }}> <MaterialCommunityIcons name="account-group-outline" size={24} color='white' /></Estilo>
+                        <Estilo vari='col' style={{ padding: 10 }}>
+                            <Text style={{ fontFamily: 'Inter_600SemiBold', fontSize: 20, alignSelf: 'flex-start', color: "#b18537" }}>
+                                01
+                            </Text>
+                            <Text style={{ alignSelf: 'flex-start', paddingBlock: 10, fontFamily: 'PlayfairDisplay_700Bold' }}>
+                                Criamos o storytelling
+                            </Text>
+                            <Text style={{ fontFamily: 'Inter_400Regular' }}>
+                                Entendemos a sua história, os seus objetivos e o que torna o seu negocio único</Text>
 
-                <Estilo vari='row'>
-                    <Estilo vari='row' style={{backgroundColor: "#fff", height: 100}} >
-                        <Feather name="target" size={24} color="#3f6e58" />
-<Entypo name="paper-plane" size={24} color="#3f6e58" />
-<MaterialCommunityIcons name="silverware-fork-knife" size={24} color="#3f6e58" />
-<SimpleLineIcons name="cup" size={24} color="#3f6e58" />
-<FontAwesome6 name="bed" size={24} color="#3f6e58" />
-<SimpleLineIcons name="handbag" size={24} color="#3f6e58" />
-<SimpleLineIcons name="bag" size={24} color="#3f6e58" />
-<MaterialCommunityIcons name="account-group-outline" size={24} color="#3f6e58" />
+                        </Estilo>
+                        <Feather name="arrow-right" size={24} color="#b18537" />
                     </Estilo>
+                    {/*Coluna 2*/}
+                    <Estilo vari='row' style={{ flex: 3, padding: 10 }}>
+                        <Estilo vari='item' style={{ borderRadius: '100%', backgroundColor: "#223924", padding: 10, alignItems: 'center', justifyContent: 'center', alignSelf: 'baseline', width: 40, height: 40 }}> <MaterialCommunityIcons name="account-group-outline" size={24} color='white' /></Estilo>
+                        <Estilo vari='col' style={{ padding: 10 }}>
+                            <Text style={{ fontFamily: 'Inter_600SemiBold', fontSize: 20, alignSelf: 'flex-start', color: "#b18537" }}>
+                                02
+                            </Text>
+                            <Text style={{ alignSelf: 'flex-start', paddingBlock: 10, fontFamily: 'PlayfairDisplay_700Bold' }}>
+                                Criamos o storytelling
+                            </Text>
+                            <Text style={{ fontFamily: 'Inter_400Regular' }}>
+                                Entendemos a sua história, os seus objetivos e o que torna o seu negocio único</Text>
 
+                        </Estilo>
+                        <Feather name="arrow-right" size={24} color="#b18537" />
+                    </Estilo>
+                    {/*Coluna 3*/}
+                    <Estilo vari='row' style={{ flex: 3, padding: 10 }}>
+                        <Estilo vari='item' style={{ borderRadius: '100%', backgroundColor: "#223924", padding: 10, alignItems: 'center', justifyContent: 'center', alignSelf: 'baseline', width: 40, height: 40 }}> <Entypo name="paper-plane" size={24} color="#fff" /></Estilo>
+                        <Estilo vari='col' style={{ padding: 10 }}>
+                            <Text style={{ fontFamily: 'Inter_600SemiBold', fontSize: 20, alignSelf: 'flex-start', color: "#b18537" }}>
+                                03
+                            </Text>
+                            <Text style={{ alignSelf: 'flex-start', paddingBlock: 10, fontFamily: 'PlayfairDisplay_700Bold' }}>
+                                Criamos o storytelling
+                            </Text>
+                            <Text style={{ fontFamily: 'Inter_400Regular' }}>
+                                Entendemos a sua história, os seus objetivos e o que torna o seu negocio único</Text>
+
+                        </Estilo>
+                        <Feather name="arrow-right" size={24} color="#b18537" />
+                    </Estilo>
                 </Estilo>
 
 
+            </Estilo>
+            {/*Pra quem é respira row*/}
+            <Estilo vari='row'>
+                <Estilo vari='col' style={{ backgroundColor: '#fff', padding: 25 }}>
+
+                    <Text style={{ fontFamily: 'Inter_600SemiBold', fontSize: 15, alignSelf: 'center', alignContent: 'center', alignItems: 'center', color: "#b18537" }}>
+                        PARA QUEM É A RESPIRA?</Text>
+                    <Text style={{ fontFamily: 'PlayfairDisplay_700Bold', fontSize: 18, alignSelf: 'center', alignContent: 'center', alignItems: 'center' }}>
+                        Pefeita para quem quer crescer e estar na rota certa.</Text>
 
 
-                {/*<Estilo vari="body">
-                        Este é o corpo do texto. Ele é usado para parágrafos longos, descrições e
-                        qualquer conteúdo que não seja um título. É muito mais fácil de ler e
-                        manter!
-                    </Estilo>
-                    */}
-                <Text style={{ fontFamily: 'Lato_900Black', fontSize: 20 }}>Lato900black</Text>
+                </Estilo>
+
+            </Estilo>
+            {/*Todos os icones row*/}
+            <Estilo vari='row'>
+                <Estilo vari='row' style={{ backgroundColor: "#fff", height: 100 }} >
+                    <Feather name="target" size={24} color="#3f6e58" />
+                    <Entypo name="paper-plane" size={24} color="#3f6e58" />
+                    <MaterialCommunityIcons name="silverware-fork-knife" size={24} color="#3f6e58" />
+                    <SimpleLineIcons name="cup" size={24} color="#3f6e58" />
+                    <FontAwesome6 name="bed" size={24} color="#3f6e58" />
+                    <SimpleLineIcons name="handbag" size={24} color="#3f6e58" />
+                    <SimpleLineIcons name="bag" size={24} color="#3f6e58" />
+                    <MaterialCommunityIcons name="account-group-outline" size={24} color="#3f6e58" />
+                </Estilo>
+                <Text style={{ fontFamily: 'Lato_900Black', fontSize: 20, backgroundColor: 'white' }}>Lato900black</Text>
 
 
 
