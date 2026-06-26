@@ -104,11 +104,11 @@ export default function Index() {
 
                 </Estilo>
                 {/*criamos stortelling row*/}
-                <Estilo vari='row' style={{ backgroundColor: 'white', flex: 1, padding: 50 }}>
+                <Estilo vari='row' style={{ backgroundColor: 'white', flex: 1, padding: 50, paddingBottom: 70 }}>
                     {/*Coluna 1*/}
                     <Estilo vari='row' style={{ flex: 3, padding: 10 }}>
                         {/*Icone ->*/}<Estilo vari='item' style={{ borderRadius: '100%', backgroundColor: "#223924", padding: 10, alignItems: 'center', justifyContent: 'center', alignSelf: 'baseline', width: 40, height: 40 }}> <MaterialCommunityIcons name="account-group-outline" size={24} color='white' /></Estilo>
-                        <Estilo vari='col' style={{ padding: 10 }}>
+                        <Estilo vari='col' style={{ padding: 10, paddingBottom: 50 }}>
                             <Text style={{ fontFamily: 'Inter_600SemiBold', fontSize: 20, alignSelf: 'flex-start', color: "#b18537" }}>
                                 01
                             </Text>
@@ -124,7 +124,7 @@ export default function Index() {
                     {/*Coluna 2*/}
                     <Estilo vari='row' style={{ flex: 3, padding: 10 }}>
                         <Estilo vari='item' style={{ borderRadius: '100%', backgroundColor: "#223924", padding: 10, alignItems: 'center', justifyContent: 'center', alignSelf: 'baseline', width: 40, height: 40 }}> <MaterialCommunityIcons name="account-group-outline" size={24} color='white' /></Estilo>
-                        <Estilo vari='col' style={{ padding: 10 }}>
+                        <Estilo vari='col' style={{ padding: 10, paddingBottom: 50 }}>
                             <Text style={{ fontFamily: 'Inter_600SemiBold', fontSize: 20, alignSelf: 'flex-start', color: "#b18537" }}>
                                 02
                             </Text>
@@ -140,7 +140,7 @@ export default function Index() {
                     {/*Coluna 3*/}
                     <Estilo vari='row' style={{ flex: 3, padding: 10 }}>
                         <Estilo vari='item' style={{ borderRadius: '100%', backgroundColor: "#223924", padding: 10, alignItems: 'center', justifyContent: 'center', alignSelf: 'baseline', width: 40, height: 40 }}> <Entypo name="paper-plane" size={24} color="#fff" /></Estilo>
-                        <Estilo vari='col' style={{ padding: 10 }}>
+                        <Estilo vari='col' style={{ padding: 10, paddingBottom: 50 }}>
                             <Text style={{ fontFamily: 'Inter_600SemiBold', fontSize: 20, alignSelf: 'flex-start', color: "#b18537" }}>
                                 03
                             </Text>
@@ -154,7 +154,8 @@ export default function Index() {
                         <Feather name="arrow-right" size={24} color="#b18537" />
                     </Estilo>
                 </Estilo>
-
+{/*SPAN*/}
+                <Estilo vari='wrapper' style={{ height: 1, width: '85%', padding: 19, backgroundColor: '#adab9a', alignSelf: 'center' }}></Estilo>
 
             </Estilo>
             {/*Pra quem é respira row*/}
@@ -187,8 +188,8 @@ export default function Index() {
 
 
             {/* Mapa row*/}
-            <Estilo vari='row' style={{ justifyContent: 'space-around', flex: 1 }} >
-                <Estilo vari='wrapper'>
+            <Estilo vari='row' style={{ justifyContent: 'space-around', flex: 1, alignItems: 'center' }} >
+                <Estilo vari='wrapper' style={{ flex: 1 }}>
                     <ImageBackground
                         source={require('@/assets/images/mapatejo.png')}
                         style={styles.mapa}
@@ -197,7 +198,7 @@ export default function Index() {
 
 
                 {/* Form */}
-                <Estilo vari='col' style={{ flex: 1, backgroundColor: '#202916', width: 'auto', height: 'auto', borderRadius: 5, minHeight: 600 }}>
+                <Estilo vari='col' style={{ flex: 1, backgroundColor: '#202916', width: 'auto', height: 'auto', borderRadius: 5, minHeight: 500 }}>
                     <Estilo vari='col'>
                         <Text style={{ fontFamily: 'PlayfairDisplay_700Bold', fontSize: 22, color: '#fff', width: "50%" }}>
                             VAMOS DAR VIDA À SUA HTÓRIA?</Text>
@@ -226,7 +227,7 @@ export default function Index() {
                     </Estilo>
 
                     <Estilo vari='wrapper'>
-                    
+
                         <Link href="/" style={styles.button}>
                             <MaterialCommunityIcons name="calendar-month-outline" size={24} color="black" />
                             <Text>MARCAR REUNIÃO</Text>
@@ -261,9 +262,10 @@ const styles = StyleSheet.create({
 
     scrollContent: {
         gap: 15,
+        backgroundColor: '#ffffff'
     },
     item: {
-        backgroundColor: '#eeeeee',
+        backgroundColor: '#ffffff',
         width: '100%',
         height: '100%',
         minHeight: 400,
@@ -283,8 +285,9 @@ const styles = StyleSheet.create({
     mapa: {
         width: '95%',
         height: 'auto',
-        alignSelf: 'center'
-        
+        alignSelf: 'center',
+        padding: 250
+
 
 
     },
