@@ -70,11 +70,16 @@ export default function Index() {
                                     <Text style={{ fontFamily: 'Inter_400Regular', fontSize: 15, color: '#fff' }}>  e tranforma história em conexões reais.</Text>
 
                                 </Estilo>
-                                <Estilo vari='wrapper'>
-                                    <Text style={{ fontFamily: 'PlayfairDisplay_400Regular_Italic', fontSize: 20, }}>
-                                        Ver video da campanha</Text>
+                               {/*  <Estilo vari='row' style={{ paddingTop: 25, flex: 1, width: 300, height: 300}}>
+                                   <Link href="/" style={{ color: '#fff', fontSize: 15, backgroundColor: '#b18537', borderRadius: 5, textAlign: 'center', flex: 1}}>
+                                        <Estilo vari='wrapper' style={{padding: 15, }}>
+                                            <FontAwesome name="play-circle" size={24} color="#fff" />
+                                        </Estilo>
+                                        <Text style={{ height: '100%', flex: 1}}>
+                                            VER VIDEO DA CAMPANHA</Text>
+                                    </Link>
 
-                                </Estilo>
+                                </Estilo>*/}
 
 
                             </Estilo>
@@ -176,24 +181,24 @@ export default function Index() {
             {/*Todos os icones row*/}
             <Estilo vari='row'>
                 <Estilo vari='row' style={{ backgroundColor: "#fff", height: 100 }} >
-                    
+
                     <Estilo vari='col'><MaterialCommunityIcons name="silverware-fork-knife" size={24} color="#3f6e58" />
-                    <Text>Restaurantes</Text>
+                        <Text>Restaurantes</Text>
                     </Estilo>
                     <Estilo vari='col'><SimpleLineIcons name="cup" size={24} color="#3f6e58" />
-                    <Text>Cafés e Pastelarias</Text></Estilo>
+                        <Text>Cafés e Pastelarias</Text></Estilo>
                     <Estilo vari='col'><FontAwesome6 name="bed" size={24} color="#3f6e58" />
-                    <Text>Alojamentos Locais</Text></Estilo>
+                        <Text>Alojamentos Locais</Text></Estilo>
                     <Estilo vari='col'><SimpleLineIcons name="handbag" size={24} color="#3f6e58" />
-                    <Text>Comércio Local</Text></Estilo>
+                        <Text>Comércio Local</Text></Estilo>
                     <Estilo vari='col'><SimpleLineIcons name="bag" size={24} color="#3f6e58" />
-                    <Text>Pequenas Empresas</Text></Estilo>
-                    
-                    
-                    
-                    
-                    
-                   
+                        <Text>Pequenas Empresas</Text></Estilo>
+
+
+
+
+
+
                 </Estilo>
                 <Text style={{ fontFamily: 'Lato_900Black', fontSize: 20, backgroundColor: 'white' }}>Lato900black</Text>
             </Estilo>
@@ -261,23 +266,23 @@ export default function Index() {
 
             <Estilo vari='row'>
                 <Estilo vari='row' style={{ backgroundColor: "#e9e9e9", height: '45%', width: '100%', flex: 1 }} >
-                    <Estilo vari='row' style={{height: 200, width: "15%", justifyContent: 'space-around', padding: 10}}><Estilo vari='wrapper' style={{paddingHorizontal: 28}}><FontAwesome6 name="clapperboard" size={24} color="#3f6e58"  /></Estilo>
-                    <Text>Produção audiovisual de alta qualidade</Text>
+                    <Estilo vari='row' style={{ height: 200, width: "15%", justifyContent: 'space-around', padding: 10 }}><Estilo vari='wrapper' style={{ paddingHorizontal: 28 }}><FontAwesome6 name="clapperboard" size={24} color="#3f6e58" /></Estilo>
+                        <Text>Produção audiovisual de alta qualidade</Text>
                     </Estilo>
-                    <Estilo vari='row'style={{height: 200, width: "15%", justifyContent: 'space-around', padding: 10}}><Estilo vari='wrapper' style={{paddingHorizontal: 28}}><Feather name="target" size={34} color="#3f6e58" /></Estilo>
-                    <Text>Foco em resultados e autenticidade</Text>
+                    <Estilo vari='row' style={{ height: 200, width: "15%", justifyContent: 'space-around', padding: 10 }}><Estilo vari='wrapper' style={{ paddingHorizontal: 28 }}><Feather name="target" size={34} color="#3f6e58" /></Estilo>
+                        <Text>Foco em resultados e autenticidade</Text>
                     </Estilo>
-                    <Estilo vari='row' style={{height: 200, width: "15%", justifyContent: 'space-around', padding: 10}}><Estilo vari='wrapper' style={{paddingHorizontal: 28}}><EvilIcons name="location" size={40} color="#3f6e58" /></Estilo>
-                    <Text>Especialistas no Médio Tejo</Text>
+                    <Estilo vari='row' style={{ height: 200, width: "15%", justifyContent: 'space-around', padding: 10 }}><Estilo vari='wrapper' style={{ paddingHorizontal: 28 }}><EvilIcons name="location" size={40} color="#3f6e58" /></Estilo>
+                        <Text>Especialistas no Médio Tejo</Text>
                     </Estilo>
-                    <Estilo vari='row' style={{height: 200, width: "15%", justifyContent: 'space-around', padding: 10}}><Estilo vari='wrapper' style={{paddingHorizontal: 28}}><FontAwesome name="handshake-o" size={32} color="#3f6e58" /></Estilo>
-                    <Text>Acompanhamento próximo e humano</Text>
+                    <Estilo vari='row' style={{ height: 200, width: "15%", justifyContent: 'space-around', padding: 10 }}><Estilo vari='wrapper' style={{ paddingHorizontal: 28 }}><FontAwesome name="handshake-o" size={32} color="#3f6e58" /></Estilo>
+                        <Text>Acompanhamento próximo e humano</Text>
                     </Estilo>
-                    <Estilo vari='row' style={{height: 200, width: "15%", justifyContent: 'space-around', padding: 10}}><Estilo vari='wrapper' style={{paddingHorizontal: 28}}><MaterialCommunityIcons name="trending-up" size={47} color="#3f6e58" /></Estilo>
-                    Conteúdos que geram impacto
+                    <Estilo vari='row' style={{ height: 200, width: "15%", justifyContent: 'space-around', padding: 10 }}><Estilo vari='wrapper' style={{ paddingHorizontal: 28 }}><MaterialCommunityIcons name="trending-up" size={47} color="#3f6e58" /></Estilo>
+                        Conteúdos que geram impacto
                     </Estilo>
                 </Estilo>
-               
+
             </Estilo>
         </ScrollView >
     );
