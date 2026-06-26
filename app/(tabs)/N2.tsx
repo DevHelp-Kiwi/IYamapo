@@ -176,14 +176,24 @@ export default function Index() {
             {/*Todos os icones row*/}
             <Estilo vari='row'>
                 <Estilo vari='row' style={{ backgroundColor: "#fff", height: 100 }} >
-                    <Feather name="target" size={24} color="#3f6e58" />
-                    <Entypo name="paper-plane" size={24} color="#3f6e58" />
-                    <MaterialCommunityIcons name="silverware-fork-knife" size={24} color="#3f6e58" />
-                    <SimpleLineIcons name="cup" size={24} color="#3f6e58" />
-                    <FontAwesome6 name="bed" size={24} color="#3f6e58" />
-                    <SimpleLineIcons name="handbag" size={24} color="#3f6e58" />
-                    <SimpleLineIcons name="bag" size={24} color="#3f6e58" />
-                    <MaterialCommunityIcons name="account-group-outline" size={24} color="#3f6e58" />
+                    
+                    <Estilo vari='col'><MaterialCommunityIcons name="silverware-fork-knife" size={24} color="#3f6e58" />
+                    <Text>Restaurantes</Text>
+                    </Estilo>
+                    <Estilo vari='col'><SimpleLineIcons name="cup" size={24} color="#3f6e58" />
+                    <Text>Cafés e Pastelarias</Text></Estilo>
+                    <Estilo vari='col'><FontAwesome6 name="bed" size={24} color="#3f6e58" />
+                    <Text>Alojamentos Locais</Text></Estilo>
+                    <Estilo vari='col'><SimpleLineIcons name="handbag" size={24} color="#3f6e58" />
+                    <Text>Comércio Local</Text></Estilo>
+                    <Estilo vari='col'><SimpleLineIcons name="bag" size={24} color="#3f6e58" />
+                    <Text>Pequenas Empresas</Text></Estilo>
+                    
+                    
+                    
+                    
+                    
+                   
                 </Estilo>
                 <Text style={{ fontFamily: 'Lato_900Black', fontSize: 20, backgroundColor: 'white' }}>Lato900black</Text>
             </Estilo>
@@ -250,12 +260,22 @@ export default function Index() {
             </Estilo>
 
             <Estilo vari='row'>
-                <Estilo vari='row' style={{ backgroundColor: "#fff", height: '100%', width: '100%', flex: 1 }} >
-                    <Estilo vari='row' style={{height: 200, width: 100}}><FontAwesome6 name="clapperboard" size={24} color="#3f6e58" /></Estilo>
-                    <Estilo vari='row'style={{height: 200, width: 100}}><Feather name="target" size={24} color="#3f6e58" /></Estilo>
-                    <Estilo vari='row' style={{height: 200, width: 100}}><EvilIcons name="location" size={40} color="#3f6e58" /></Estilo>
-                    <Estilo vari='row' style={{height: 200, width: 100}}><FontAwesome name="handshake-o" size={24} color="#3f6e58" /></Estilo>
-                    <Estilo vari='row' style={{height: 200, width: 100}}><MaterialCommunityIcons name="trending-up" size={33} color="#3f6e58" /></Estilo>
+                <Estilo vari='row' style={{ backgroundColor: "#e9e9e9", height: '45%', width: '100%', flex: 1 }} >
+                    <Estilo vari='row' style={{height: 200, width: "15%", justifyContent: 'space-around', padding: 10}}><Estilo vari='wrapper' style={{paddingHorizontal: 28}}><FontAwesome6 name="clapperboard" size={24} color="#3f6e58"  /></Estilo>
+                    <Text>Produção audiovisual de alta qualidade</Text>
+                    </Estilo>
+                    <Estilo vari='row'style={{height: 200, width: "15%", justifyContent: 'space-around', padding: 10}}><Estilo vari='wrapper' style={{paddingHorizontal: 28}}><Feather name="target" size={34} color="#3f6e58" /></Estilo>
+                    <Text>Foco em resultados e autenticidade</Text>
+                    </Estilo>
+                    <Estilo vari='row' style={{height: 200, width: "15%", justifyContent: 'space-around', padding: 10}}><Estilo vari='wrapper' style={{paddingHorizontal: 28}}><EvilIcons name="location" size={40} color="#3f6e58" /></Estilo>
+                    <Text>Especialistas no Médio Tejo</Text>
+                    </Estilo>
+                    <Estilo vari='row' style={{height: 200, width: "15%", justifyContent: 'space-around', padding: 10}}><Estilo vari='wrapper' style={{paddingHorizontal: 28}}><FontAwesome name="handshake-o" size={32} color="#3f6e58" /></Estilo>
+                    <Text>Acompanhamento próximo e humano</Text>
+                    </Estilo>
+                    <Estilo vari='row' style={{height: 200, width: "15%", justifyContent: 'space-around', padding: 10}}><Estilo vari='wrapper' style={{paddingHorizontal: 28}}><MaterialCommunityIcons name="trending-up" size={47} color="#3f6e58" /></Estilo>
+                    Conteúdos que geram impacto
+                    </Estilo>
                 </Estilo>
                
             </Estilo>
