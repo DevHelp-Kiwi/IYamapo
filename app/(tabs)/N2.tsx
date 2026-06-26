@@ -9,10 +9,11 @@ import Entypo from '@expo/vector-icons/Entypo';
 import Feather from '@expo/vector-icons/Feather';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import SimpleLineIcons from '@expo/vector-icons/SimpleLineIcons';
 import { Link } from 'expo-router';
 import React from 'react';
-import { ImageBackground, ScrollView, StyleSheet, Text } from 'react-native';
+import { ImageBackground, ScrollView, StyleSheet, Text, TextInput } from 'react-native';
 
 
 
@@ -99,15 +100,14 @@ export default function Index() {
 
                     </Estilo>
 
-                    <Link href="/" style={styles.button}>
-                    </Link>
+
 
                 </Estilo>
                 {/*criamos stortelling row*/}
-                <Estilo vari='row' style={{ backgroundColor: 'white' }}>
+                <Estilo vari='row' style={{ backgroundColor: 'white', flex: 1, padding: 50 }}>
                     {/*Coluna 1*/}
                     <Estilo vari='row' style={{ flex: 3, padding: 10 }}>
-                        <Estilo vari='item' style={{ borderRadius: '100%', backgroundColor: "#223924", padding: 10, alignItems: 'center', justifyContent: 'center', alignSelf: 'baseline', width: 40, height: 40 }}> <MaterialCommunityIcons name="account-group-outline" size={24} color='white' /></Estilo>
+                        {/*Icone ->*/}<Estilo vari='item' style={{ borderRadius: '100%', backgroundColor: "#223924", padding: 10, alignItems: 'center', justifyContent: 'center', alignSelf: 'baseline', width: 40, height: 40 }}> <MaterialCommunityIcons name="account-group-outline" size={24} color='white' /></Estilo>
                         <Estilo vari='col' style={{ padding: 10 }}>
                             <Text style={{ fontFamily: 'Inter_600SemiBold', fontSize: 20, alignSelf: 'flex-start', color: "#b18537" }}>
                                 01
@@ -115,7 +115,7 @@ export default function Index() {
                             <Text style={{ alignSelf: 'flex-start', paddingBlock: 10, fontFamily: 'PlayfairDisplay_700Bold' }}>
                                 Criamos o storytelling
                             </Text>
-                            <Text style={{ fontFamily: 'Inter_400Regular' }}>
+                            <Text style={{ fontFamily: 'Inter_400Regular', color: '#000000' }}>
                                 Entendemos a sua história, os seus objetivos e o que torna o seu negocio único</Text>
 
                         </Estilo>
@@ -183,12 +183,75 @@ export default function Index() {
                     <MaterialCommunityIcons name="account-group-outline" size={24} color="#3f6e58" />
                 </Estilo>
                 <Text style={{ fontFamily: 'Lato_900Black', fontSize: 20, backgroundColor: 'white' }}>Lato900black</Text>
-
-
-
             </Estilo>
 
 
+            {/* Mapa row*/}
+            <Estilo vari='row' style={{ justifyContent: 'space-around', flex: 1 }} >
+                <Estilo vari='wrapper'>
+                    <ImageBackground
+                        source={require('@/assets/images/mapatejo.png')}
+                        style={styles.mapa}
+                        imageStyle={{ resizeMode: "contain" }}></ImageBackground>
+                </Estilo>
+
+
+                {/* Form */}
+                <Estilo vari='col' style={{ flex: 1, backgroundColor: '#202916', width: 'auto', height: 'auto', borderRadius: 5, minHeight: 600 }}>
+                    <Estilo vari='col'>
+                        <Text style={{ fontFamily: 'PlayfairDisplay_700Bold', fontSize: 22, color: '#fff', width: "50%" }}>
+                            VAMOS DAR VIDA À SUA HTÓRIA?</Text>
+                        <Text style={{ color: '#fff', width: "60%", alignSelf: 'flex-start' }}>conte-nos sobre o seu negócio e criamos o video ideal pra si.</Text>
+                    </Estilo>
+
+                    <Estilo vari='col'>
+                        <Estilo vari='row'>
+                            {/* Nome*/}
+                            <TextInput placeholder='Nome' style={styles.texto}></TextInput>
+                            {/* Email*/}
+                            <TextInput placeholder='Email' style={styles.texto}></TextInput>
+                        </Estilo>
+
+                        <Estilo vari='row'>
+                            {/* Telefone */}
+                            <TextInput placeholder='Telefone' style={styles.texto}></TextInput>
+                            {/* Nome do negócio*/}
+                            <TextInput placeholder='Nome do negócio' style={styles.texto}></TextInput>
+                        </Estilo>
+                        <Estilo vari='row'>
+                            {/* Como podemos ajudar? */}
+                            <TextInput placeholder='Como podemos ajudar?' style={styles.texto}></TextInput>
+                        </Estilo>
+
+                    </Estilo>
+
+                    <Estilo vari='wrapper'>
+                    
+                        <Link href="/" style={styles.button}>
+                            <MaterialCommunityIcons name="calendar-month-outline" size={24} color="black" />
+                            <Text>MARCAR REUNIÃO</Text>
+                        </Link>
+                        <Estilo vari='row'>
+                            <MaterialIcons name="lock-outline" size={14} color="#fff" />
+                            <Text style={{ color: '#fff', width: "90%", fontSize: 8, fontFamily: 'Inter_400Regular', paddingVertical: 10 }}>Entraremos em contato para agendar a melhor hora</Text>
+                        </Estilo>
+                    </Estilo>
+                </Estilo>
+            </Estilo>
+
+            <Estilo vari='row'>
+                <Estilo vari='row' style={{ padding: 20, backgroundColor: 'white', }}>
+                    <Estilo vari='row' style={{ alignContent: 'center', alignItems: 'center', justifyContent: 'center' }}>
+                        <SimpleLineIcons name="cup" size={24} color="#3f6e58" />
+                        <Text>abçabçe</Text></Estilo>
+
+                    <SimpleLineIcons name="cup" size={24} color="#3f6e58" />
+                    <SimpleLineIcons name="cup" size={24} color="#3f6e58" />
+                    <SimpleLineIcons name="cup" size={24} color="#3f6e58" />
+                    <SimpleLineIcons name="cup" size={24} color="#3f6e58" />
+                </Estilo>
+
+            </Estilo>
         </ScrollView >
     );
 }
@@ -212,6 +275,36 @@ const styles = StyleSheet.create({
     button: {
         fontSize: 20,
         textDecorationLine: 'underline',
+        padding: 20,
+        backgroundColor: '#b18537',
+        borderRadius: 8
+
+    },
+    mapa: {
+        width: '95%',
+        height: 'auto',
+        alignSelf: 'center'
+        
+
+
+    },
+    texto: {
+        color: "#fff",
+        width: '100%',
+        height: 35,
+        padding: 5,
+        borderRadius: 5,
+        alignItems: 'flex-start',
+        justifyContent: 'flex-start',
+        textAlign: 'left',
+        fontSize: 12,
+        fontFamily: 'Inter_400Regular',
+        outlineColor: '#bebebe',
+        borderWidth: 1,
+        borderColor: "#ffffff"
+
+
     },
 });
 
+{/* 'cover', 'contain', 'stretch', 'repeat', 'center')	  */ }
