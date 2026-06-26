@@ -6,7 +6,9 @@ import { Inter_600SemiBold } from '@expo-google-fonts/inter/600SemiBold';
 import { Lato_900Black } from '@expo-google-fonts/lato';
 import { PlayfairDisplay_400Regular_Italic, PlayfairDisplay_700Bold } from '@expo-google-fonts/playfair-display';
 import Entypo from '@expo/vector-icons/Entypo';
+import EvilIcons from '@expo/vector-icons/EvilIcons';
 import Feather from '@expo/vector-icons/Feather';
+import FontAwesome from '@expo/vector-icons/FontAwesome';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
@@ -154,8 +156,8 @@ export default function Index() {
                         <Feather name="arrow-right" size={24} color="#b18537" />
                     </Estilo>
                 </Estilo>
-{/*SPAN*/}
-                <Estilo vari='wrapper' style={{ height: 1, width: '85%', padding: 19, backgroundColor: '#adab9a', alignSelf: 'center' }}></Estilo>
+                {/*SPAN*/}
+                <Estilo vari='wrapper' style={{ height: 1, width: '85%', padding: 5, backgroundColor: '#adab9a', alignSelf: 'center' }}></Estilo>
 
             </Estilo>
             {/*Pra quem é respira row*/}
@@ -198,30 +200,36 @@ export default function Index() {
 
 
                 {/* Form */}
-                <Estilo vari='col' style={{ flex: 1, backgroundColor: '#202916', width: 'auto', height: 'auto', borderRadius: 5, minHeight: 500 }}>
-                    <Estilo vari='col'>
-                        <Text style={{ fontFamily: 'PlayfairDisplay_700Bold', fontSize: 22, color: '#fff', width: "50%" }}>
-                            VAMOS DAR VIDA À SUA HTÓRIA?</Text>
-                        <Text style={{ color: '#fff', width: "60%", alignSelf: 'flex-start' }}>conte-nos sobre o seu negócio e criamos o video ideal pra si.</Text>
+                <Estilo vari='col' style={{ flex: 1, backgroundColor: '#202916', width: 'auto', height: 'auto', borderRadius: 5, minHeight: 500, alignItems: 'stretch', justifyContent: 'space-evenly' }}>
+                    <Estilo vari='col' style={{ width: "40%", alignSelf: 'flex-start', padding: 50 }}>
+                        <Text style={{ fontFamily: 'PlayfairDisplay_700Bold', fontSize: 22, color: '#fff' }}>
+                            VAMOS DAR VIDA À SUA HISTÓRIA?</Text>
+                        <Estilo vari='wrapper' style={{ alignSelf: 'flex-start', maxHeight: 70, paddingBottom: 10 }}>
+                            <Text style={{ textDecorationLine: 'underline', textDecorationColor: '#b18537', color: '#b18537' }}> ___________________
+                                {/*vazio para pegar apenas as props do underline*/}
+                            </Text>
+                        </Estilo>
+                        <Text style={{ color: '#fff', width: "100%", alignSelf: 'flex-start' }}>
+                            Conte-nos sobre o seu negócio e criamos o video ideal pra si.</Text>
                     </Estilo>
 
-                    <Estilo vari='col'>
-                        <Estilo vari='row'>
+                    <Estilo vari='col' >
+                        <Estilo vari='row' style={{ width: '90%', paddingVertical: 10 }}>
                             {/* Nome*/}
                             <TextInput placeholder='Nome' style={styles.texto}></TextInput>
                             {/* Email*/}
                             <TextInput placeholder='Email' style={styles.texto}></TextInput>
                         </Estilo>
 
-                        <Estilo vari='row'>
+                        <Estilo vari='row' style={{ width: '90%', paddingVertical: 10 }}>
                             {/* Telefone */}
                             <TextInput placeholder='Telefone' style={styles.texto}></TextInput>
                             {/* Nome do negócio*/}
                             <TextInput placeholder='Nome do negócio' style={styles.texto}></TextInput>
                         </Estilo>
-                        <Estilo vari='row'>
+                        <Estilo vari='row' style={{ width: '90%', paddingVertical: 10 }}>
                             {/* Como podemos ajudar? */}
-                            <TextInput placeholder='Como podemos ajudar?' style={styles.texto}></TextInput>
+                            <TextInput placeholder='Como podemos ajudar?' style={styles.texto2} ></TextInput>
                         </Estilo>
 
                     </Estilo>
@@ -229,29 +237,27 @@ export default function Index() {
                     <Estilo vari='wrapper'>
 
                         <Link href="/" style={styles.button}>
-                            <MaterialCommunityIcons name="calendar-month-outline" size={24} color="black" />
-                            <Text>MARCAR REUNIÃO</Text>
+                            <MaterialCommunityIcons name="calendar-month-outline" size={25} color="#fff" style={{ paddingHorizontal: 15 }} />
+                            <Text style={{ color: '#fff' }}>MARCAR REUNIÃO</Text>
                         </Link>
-                        <Estilo vari='row'>
-                            <MaterialIcons name="lock-outline" size={14} color="#fff" />
-                            <Text style={{ color: '#fff', width: "90%", fontSize: 8, fontFamily: 'Inter_400Regular', paddingVertical: 10 }}>Entraremos em contato para agendar a melhor hora</Text>
+                        <Estilo vari='row' style={{ justifyContent: 'center', width: "90%" }} >
+                            <MaterialIcons name="lock-outline" size={14} color="#fff" style={{ padding: 10 }} />
+                            <Text style={{ color: '#fff', fontSize: 8, fontFamily: 'Inter_400Regular', paddingVertical: 10, textAlign: 'center' }}>
+                                Entraremos em contato para agendar a melhor hora</Text>
                         </Estilo>
                     </Estilo>
                 </Estilo>
             </Estilo>
 
             <Estilo vari='row'>
-                <Estilo vari='row' style={{ padding: 20, backgroundColor: 'white', }}>
-                    <Estilo vari='row' style={{ alignContent: 'center', alignItems: 'center', justifyContent: 'center' }}>
-                        <SimpleLineIcons name="cup" size={24} color="#3f6e58" />
-                        <Text>abçabçe</Text></Estilo>
-
-                    <SimpleLineIcons name="cup" size={24} color="#3f6e58" />
-                    <SimpleLineIcons name="cup" size={24} color="#3f6e58" />
-                    <SimpleLineIcons name="cup" size={24} color="#3f6e58" />
-                    <SimpleLineIcons name="cup" size={24} color="#3f6e58" />
+                <Estilo vari='row' style={{ backgroundColor: "#fff", height: '100%', width: '100%', flex: 1 }} >
+                    <Estilo vari='row' style={{height: 200, width: 100}}><FontAwesome6 name="clapperboard" size={24} color="#3f6e58" /></Estilo>
+                    <Estilo vari='row'style={{height: 200, width: 100}}><Feather name="target" size={24} color="#3f6e58" /></Estilo>
+                    <Estilo vari='row' style={{height: 200, width: 100}}><EvilIcons name="location" size={40} color="#3f6e58" /></Estilo>
+                    <Estilo vari='row' style={{height: 200, width: 100}}><FontAwesome name="handshake-o" size={24} color="#3f6e58" /></Estilo>
+                    <Estilo vari='row' style={{height: 200, width: 100}}><MaterialCommunityIcons name="trending-up" size={33} color="#3f6e58" /></Estilo>
                 </Estilo>
-
+               
             </Estilo>
         </ScrollView >
     );
@@ -275,11 +281,15 @@ const styles = StyleSheet.create({
 
     },
     button: {
-        fontSize: 20,
-        textDecorationLine: 'underline',
+        fontSize: 18,
         padding: 20,
         backgroundColor: '#b18537',
-        borderRadius: 8
+        borderRadius: 8,
+        width: '90%',
+        alignItems: 'center',
+        alignContent: 'space-around',
+        textAlign: 'center'
+
 
     },
     mapa: {
@@ -294,8 +304,30 @@ const styles = StyleSheet.create({
     texto: {
         color: "#fff",
         width: '100%',
-        height: 35,
+        height: 45,
         padding: 5,
+        paddingHorizontal: 15,
+        paddingBottom: 17,
+        borderRadius: 5,
+        alignItems: 'flex-start',
+        justifyContent: 'flex-start',
+        textAlign: 'left',
+        fontSize: 12,
+        fontFamily: 'Inter_400Regular',
+        outlineColor: '#bebebe',
+        borderWidth: 1,
+        borderColor: "#ffffff",
+
+
+
+    },
+    texto2: {
+        color: "#fff",
+        width: '100%',
+        height: 50,
+        padding: 5,
+        paddingHorizontal: 15,
+        paddingBottom: 17,
         borderRadius: 5,
         alignItems: 'flex-start',
         justifyContent: 'flex-start',
