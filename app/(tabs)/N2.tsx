@@ -136,7 +136,7 @@ export default function Index() {
                                 02
                             </Text>
                             <Text style={{ alignSelf: 'flex-start', paddingBlock: 10, fontFamily: 'PlayfairDisplay_700Bold' }}>
-                                Criamos o storytelling
+                                Captamos e editamos
                             </Text>
                             <Text style={{ fontFamily: 'Inter_400Regular' }}>
                                 Entendemos a sua história, os seus objetivos e o que torna o seu negocio único</Text>
@@ -152,7 +152,7 @@ export default function Index() {
                                 03
                             </Text>
                             <Text style={{ alignSelf: 'flex-start', paddingBlock: 10, fontFamily: 'PlayfairDisplay_700Bold' }}>
-                                Criamos o storytelling
+                                Entregamos e conectamos
                             </Text>
                             <Text style={{ fontFamily: 'Inter_400Regular' }}>
                                 Entendemos a sua história, os seus objetivos e o que torna o seu negocio único</Text>
