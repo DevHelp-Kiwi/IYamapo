@@ -41,7 +41,20 @@ export default function Index() {
           </Estilo>
         </Estilo>
 
-
+{/* SOL E CORRENTE */}
+        <View style={[styles.row, { justifyContent: "space-evenly" }]}>
+          <View style={[styles.item, { height: '100%' }]}>
+            <View style={[styles.item, { backgroundColor: "#e0bdbd" }]}>
+              <Text> Sol e corrente</Text>
+            </View>
+          </View>
+          <View style={styles.col}>
+            <Text>LOREM IPSLUM</Text>
+            <Link href="/N2" style={styles.button}>
+              Assista Trailer
+            </Link>
+          </View>
+        </View>
 
         <Estilo vari='col' style={{ flex: 1, backgroundColor: '#202916', width: 'auto', height: 'auto', borderRadius: 5, minHeight: 500, alignItems: 'stretch', justifyContent: 'space-evenly' }}>
 
@@ -56,7 +69,6 @@ export default function Index() {
             <Text style={{ color: '#fff', width: "100%", alignSelf: 'flex-start' }}>
               Conte-nos sobre o seu negócio e criamos o video ideal pra si.</Text>
           </Estilo>
-
           <Estilo vari='col' >
             <Estilo vari='row' style={{ width: '90%', paddingVertical: 10 }}>
               {/* Nome*/}
@@ -85,20 +97,7 @@ export default function Index() {
         {/* BANNER 2 */}
 
 
-        {/* SOL E CORRENTE */}
-        <View style={[styles.row, { justifyContent: "space-evenly" }]}>
-          <View style={[styles.item, { height: '100%' }]}>
-            <View style={[styles.item, { backgroundColor: "#e0bdbd" }]}>
-              <Text> Sol e corrente</Text>
-            </View>
-          </View>
-          <View style={styles.col}>
-            <Text>LOREM IPSLUM</Text>
-            <Link href="/N2" style={styles.button}>
-              Assista Trailer
-            </Link>
-          </View>
-        </View>
+        
 
         {/* TAB BANNER */}
         <View style={styles.row}>
