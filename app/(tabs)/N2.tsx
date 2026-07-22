@@ -1,23 +1,16 @@
 import { Estilo } from '@/components/estilo';
+import Icons from '@/components/icons';
 import { Birthstone_400Regular } from '@expo-google-fonts/birthstone/400Regular';
 import { useFonts } from '@expo-google-fonts/birthstone/useFonts';
 import { Inter_400Regular } from '@expo-google-fonts/inter/400Regular';
 import { Inter_600SemiBold } from '@expo-google-fonts/inter/600SemiBold';
 import { Lato_900Black } from '@expo-google-fonts/lato';
 import { PlayfairDisplay_400Regular_Italic, PlayfairDisplay_700Bold } from '@expo-google-fonts/playfair-display';
-import Entypo from '@expo/vector-icons/Entypo';
-import EvilIcons from '@expo/vector-icons/EvilIcons';
-import Feather from '@expo/vector-icons/Feather';
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
-import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-import SimpleLineIcons from '@expo/vector-icons/SimpleLineIcons';
 import { Link } from 'expo-router';
 import React from 'react';
 import { ImageBackground, ScrollView, StyleSheet, Text, TextInput } from 'react-native';
 
-
+const { Entypo, EvilIcons, Feather, FontAwesome, FontAwesome6, MaterialCommunityIcons, MaterialIcons, SimpleLineIcons } = Icons;
 
 export default function Index() {
     let [fontsLoaded] = useFonts({

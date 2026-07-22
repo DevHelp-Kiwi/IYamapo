@@ -1,6 +1,7 @@
 // components/Layout.tsx
 import { StyleSheet, View, ViewProps } from 'react-native';
 
+
 type Estilos = 'container' | 'row' | 'col' | 'banner' | 'image' | 'wrapper' | 'item';
 interface LayoutProps extends ViewProps {
   vari: Estilos;
