@@ -2,22 +2,34 @@ import { Estilo } from '@/components/estilo';
 import Icons from '@/components/icons';
 import { Link } from 'expo-router';
 import { ImageBackground, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import Carousel from '@/components/carousel';
 
 const { Feather, SimpleLineIcons, FontAwesome6, MaterialCommunityIcons } = Icons;
 
 export default function Index() {
   return (
-    <ScrollView style={styles.scrollContent}
+    <ScrollView  style={  styles.scrollContent}
       showsVerticalScrollIndicator={true}>
       <View style={styles.container}>
         {/*Acima ^ é container de background */}
-
+<Carousel>
+</Carousel>
         {/* Banner header*/}
-
-        <Estilo vari='banner'>
+   {/* <ScrollView horizontal style={styles.scrollContent}  showsVerticalScrollIndicator={false}>
+          <Estilo vari='banner'>
+         
           <ImageBackground
             source={require('@/assets/images/homescreen.jpg')}
-            style={styles.banner} /> </Estilo>
+            style={styles.banner} /> 
+            <ImageBackground
+            source={require('@/assets/images/homescreen.jpg')}
+            style={styles.banner} /> 
+            <ImageBackground
+            source={require('@/assets/images/homescreen.jpg')}
+            style={styles.banner} /> 
+
+            </Estilo>
+            </ScrollView> */}
 
         {/* Span */}
         <View style={[styles.row, { backgroundColor: '#63c53c', justifyContent: 'space-evenly' }]}><Text> Não fazemos apenas audiovisual</Text><View style={styles.item}></View></View>
@@ -73,7 +85,7 @@ export default function Index() {
             </Estilo>
             <Estilo vari='row' style={{ width: '90%', paddingVertical: 10 }}>
               {/* Como podemos ajudar? */}
-              <TextInput placeholder='Como podemos ajudar?' style={styles.texto2} ></TextInput>
+              <TextInput placeholder='Como podemos ajudar?' style={styles.texto} ></TextInput>
             </Estilo>
           </Estilo>
         </Estilo>
